@@ -319,6 +319,7 @@ html {
 
 		/* modal */
 .modal {
+	display: none;
 	position: fixed;
 	top: 0px;
 	right: 0;
@@ -326,8 +327,11 @@ html {
 	left: 0;
 	background: rgba(0, 0, 0, 0.6);
 	align-items: center;
-	display: flex;
 	justify-content: center;
+}
+
+.modal.open {
+	display: flex;
 }
 
 .modal-close {
