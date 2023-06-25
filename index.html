@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 
@@ -22,12 +22,13 @@
                 <li><a href="">Band</a></li>
                 <li><a href="">Tour</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a href=""><i class="nav-arrow-down ti-angle-down"></i></a>
-
+                <li>
+                    <a href=""><i class="nav-arrow-down ti-angle-down"></i></a>
     <!-- Dropdown -->
                     <ul class="subnav">
                         <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li></ul>    
+                        <li><a href="">Extras</a></li>
+                    </ul>    
                 </li>
             </ul>
 
@@ -42,7 +43,7 @@
                 <h1 class="text-heading">New York</h1>
                 <h2 class="text-description">The stage is set, the lights are primed, and the atmosphere is about to explode</h2>
             </div>
-    </div>
+        </div>
 
     <!-- Content -->
         <div id="content">
@@ -142,34 +143,33 @@
     <!-- Footer -->
         <div id="footer">
     </div>
-    <div class="modal js-modal">
-        <div class="modal-container">
-            <div class="modal-close js-modal-close">
-            Done
+        <div class="modal js-modal">
+            <div class="modal-container">
+                <div class="modal-close js-modal-close">
+                Done
+                </div>
+
+                <header class="modal-header">
+                    <div class="ticket">Join with us</div>
+                </header>
+
+                <div class="modal-body">
+                    <input type="text" class="modal-input" placeholder="How much do you want?">
+                </div>
+
+                <div class="modal-body">
+                    <input type="email" class="modal-input" placeholder="Your email">
+
+                    <button id="buy-tickets">
+                        <i class="ti-shopping-cart"></i>
+                    </button>
+                </div>
+
+                <footer class="modal-footer">
+                    <a href="Having trouble while buying?">Having trouble while buying?</a>
+                </footer>
             </div>
-
-            <header class="modal-header">
-                <div class="ticket">Join with us</div>
-            </header>
-
-            <div class="modal-body">
-                <input type="text" class="modal-input" placeholder="How much do you want?">
-            </div>
-
-            <div class="modal-body">
-                <input type="email" class="modal-input" placeholder="Your email">
-
-                <button id="buy-tickets">
-                    <i class="ti-shopping-cart"></i>
-                </button>
-            </div>
-
-            <footer class="modal-footer">
-                <a href="Having trouble while buying?">Having trouble while buying?</a>
-            </footer>
-
         </div>
-    </div>
     </div>
     
     <script>
@@ -186,10 +186,10 @@
         }
 
         for (const buyBtn of buyBtns) {
-            buyBtn.addEventListener('click', showBuyTickets)
+            buyBtn.addEventListener('click', showBuyTickets())
         }
 
-        modalClose.addEventListener('click', hideBuyTickets)
+        modalClose.addEventListener('click', hideBuyTickets())
     </script>
 
 </body>
